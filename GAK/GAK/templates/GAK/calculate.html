@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вычисление площади квадрата</title>
+</head>
+<body>
+<h1>Вычисление площади квадрата</h1>
+<form method="post">
+     {% csrf_token %}
+<div style="display:inline-block">
+    <label>Длина стороны квадрата</label> <input type="number" min="0" name="side_length" value="{{side_length}}" required>
+</div>
+<div style="display:inline-block">
+    <label>Площадь квадрата</label> <input type="number" disabled value="{{result}}">
+</div>
+<div style="display:inline-block">
+    <button type="submit">Выполнить</button>
+    <button type="submit" name="reset"> Очистить</button>
+</div>
+</form>
+</body>
+</html>
